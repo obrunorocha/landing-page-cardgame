@@ -44,7 +44,7 @@ header nav .item {
   opacity: 1;
 }
 
-header .card-bg {
+header .h-card-bg {
   position: absolute;
   top: 0px;
   left: 667px;
@@ -59,13 +59,13 @@ header .card-bg {
   z-index: -1;
 }
 
-header .card-body {
+header .h-card-body {
   position: absolute;
   left: 667px;
   padding: 0;
 }
 
-header .card-body .card-text {
+header .h-card-body .h-card-text {
   margin-top: 121px;
   margin-left: 30px;
   margin-bottom: 22px;
@@ -79,14 +79,14 @@ header .card-body .card-text {
   color: #fff;
 }
 
-header .card-body .card-img {
+header .h-card-body .h-card-img {
   width: 526px;
   height: 754px;
   margin-left: 33px;
   margin-right: 27px;
 }
 
-header .card-body .card-img img {
+header .h-card-body .h-card-img img {
   top: 163px;
   width: 526px;
   height: 754px;
@@ -95,14 +95,12 @@ header .card-body .card-img img {
   border-radius: 196px;
 }
 
-header .card-body .card-description {
+header .h-card-body .h-card-description {
   margin-top: 20px;
   margin-left: 157px;
   margin-right: 157px;
   text-align: center;
-  font-family: Open Sans, sans-serif;
-  font-weight: regular;
-  font-size: 20px/21px;
+  font: normal 20px/21px Open Sans, sans-serif;
   line-height: 21px;
   letter-spacing: 0;
   color: #F0F0F2;
@@ -151,9 +149,45 @@ header .pluma4 {
 }
 
 .characters .card-character {
-  top: 1379px;
-  left: 280px;
+  position: absolute;
+  margin-top: 299px;
   width: 387px;
   height: 613px;
+  background-color: #fff;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 3px 6px #FFFFFF63;
+          box-shadow: 0px 3px 6px #FFFFFF63;
+  border-radius: 27px;
+}
+
+.characters .card-character .card-image {
+  position: absolute;
+  margin-top: -93px;
+  margin-left: 10px;
+  width: 364px;
+  height: 440px;
+  background-color: #363636;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  border: 3px solid #FFFFFF;
+  border-radius: 86px;
+}
+
+.characters .card-character .card-image img {
+  width: 379px;
+  height: 525px;
+  margin-top: -79px;
+}
+
+.characters .card-character .card-text {
+  margin-top: 379px;
+  margin-left: 36px;
+  margin-right: 24.5px;
+  margin-bottom: 81px;
+  text-align: left;
+  font: normal 20px/25px Open Sans, sans-serif;
+  letter-spacing: 0;
+  color: #363636;
 }
 /*# sourceMappingURL=main.css.map */
