@@ -44,23 +44,31 @@ header nav .item {
   opacity: 1;
 }
 
-header .card {
+header .card-bg {
   position: absolute;
   top: 0px;
   left: 667px;
   width: 586px;
   height: 1080px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#990000), to(#4D1010));
-  background-image: linear-gradient(#990000, #4D1010);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#990000), to(#660000));
+  background-image: linear-gradient(#990000, #660000);
   background-position: 0% 0%;
   -webkit-box-shadow: 0px 3px 6px #00000099;
           box-shadow: 0px 3px 6px #00000099;
-  opacity: 0.7;
+  opacity: 0.4;
   z-index: -1;
 }
 
-header .card .card-text {
+header .card-body {
+  position: absolute;
+  left: 667px;
+  padding: 0;
+}
+
+header .card-body .card-text {
   margin-top: 121px;
+  margin-left: 30px;
+  margin-bottom: 22px;
   left: 697px;
   width: 230px;
   height: 20px;
@@ -69,5 +77,83 @@ header .card .card-text {
   text-transform: uppercase;
   letter-spacing: 0;
   color: #fff;
+}
+
+header .card-body .card-img {
+  width: 526px;
+  height: 754px;
+  margin-left: 33px;
+  margin-right: 27px;
+}
+
+header .card-body .card-img img {
+  top: 163px;
+  width: 526px;
+  height: 754px;
+  -webkit-box-shadow: 0px 3px 6px #00000099;
+          box-shadow: 0px 3px 6px #00000099;
+  border-radius: 196px;
+}
+
+header .card-body .card-description {
+  margin-top: 20px;
+  margin-left: 157px;
+  margin-right: 157px;
+  text-align: center;
+  font-family: Open Sans, sans-serif;
+  font-weight: regular;
+  font-size: 20px/21px;
+  line-height: 21px;
+  letter-spacing: 0;
+  color: #F0F0F2;
+  text-shadow: 0px 3px 6px #00000029;
+}
+
+header .pluma1 {
+  position: absolute;
+  top: 485px;
+  left: 624px;
+  width: 130px;
+  height: 119px;
+  z-index: 1;
+}
+
+header .pluma2 {
+  position: absolute;
+  top: 604px;
+  left: 689px;
+  width: 96px;
+  height: 100px;
+  z-index: 1;
+}
+
+header .pluma3 {
+  position: absolute;
+  top: 586px;
+  left: 1179px;
+  width: 157px;
+  height: 155px;
+  z-index: 1;
+}
+
+header .pluma4 {
+  position: absolute;
+  top: 419px;
+  left: 1089px;
+  width: 181px;
+  height: 155px;
+}
+
+.characters {
+  width: 1920px;
+  height: 1147px;
+  background-color: #363636;
+}
+
+.characters .card-character {
+  top: 1379px;
+  left: 280px;
+  width: 387px;
+  height: 613px;
 }
 /*# sourceMappingURL=main.css.map */
