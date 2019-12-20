@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -126,7 +126,7 @@ header .h-card-bg {
   header .h-card-bg {
     left: 0px;
     right: 0;
-    width: 100%;
+    width: 320px;
     height: 740px;
     margin: 0 auto;
   }
@@ -161,14 +161,13 @@ header .h-card-body {
     -ms-flex-line-pack: stretch;
         align-content: stretch;
     left: 0;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   header .h-card-body {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: block;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -webkit-box-pack: center;
@@ -177,11 +176,13 @@ header .h-card-body {
     -ms-flex-line-pack: stretch;
         align-content: stretch;
     left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
 header .h-card-body .h-card-text {
-  margin: 21px 0 22px 30px;
+  margin: 21px 0 22px 42px;
   left: 697px;
   width: 230px;
   height: 20px;
@@ -215,6 +216,7 @@ header .h-card-body .h-card-img {
 
 @media (min-width: 320px) and (max-width: 640px) {
   header .h-card-body .h-card-img {
+    display: block;
     width: 320px;
     height: auto;
     margin: 0;
@@ -223,8 +225,12 @@ header .h-card-body .h-card-img {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   header .h-card-body .h-card-img {
+    display: block;
     width: auto;
     height: auto;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
@@ -274,6 +280,19 @@ header .pluma1 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .pluma1 {
+    top: 378px;
+    left: 56px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .pluma1 {
+    display: none;
+  }
+}
+
 header .pluma2 {
   position: absolute;
   top: 518px;
@@ -284,6 +303,18 @@ header .pluma2 {
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
+  header .pluma2 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .pluma2 {
+    left: 98px;
+  }
+}
+
+@media (min-width: 1024px) {
   header .pluma2 {
     display: none;
   }
@@ -304,6 +335,18 @@ header .pluma3 {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .pluma3 {
+    left: 608px;
+  }
+}
+
+@media (min-width: 1024px) {
+  header .pluma3 {
+    display: none;
+  }
+}
+
 header .pluma4 {
   position: absolute;
   top: 323px;
@@ -313,6 +356,19 @@ header .pluma4 {
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
+  header .pluma4 {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  header .pluma4 {
+    top: 317px;
+    left: 500px;
+  }
+}
+
+@media (min-width: 1024px) {
   header .pluma4 {
     display: none;
   }
@@ -613,7 +669,7 @@ header .pluma4 {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .formulario .form-body .form-input {
-    margin: 10px;
+    margin: 20px 7px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -654,7 +710,7 @@ header .pluma4 {
   color: #FFFFFF;
   text-transform: uppercase;
   border: none;
-  margin: 48px 280px 0 0;
+  margin: 48px 300px 0 0;
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
@@ -829,5 +885,46 @@ header .pluma4 {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.animated {
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 3s;
+  -webkit-animation-fill-mode: both;
+}
+
+.animatedFadeInUp {
+  opacity: 0;
+}
+
+.fadeInUp {
+  opacity: 0;
+  animation-name: fadeInUp;
+  -webkit-animation-name: fadeInUp;
 }
 /*# sourceMappingURL=main.css.map */

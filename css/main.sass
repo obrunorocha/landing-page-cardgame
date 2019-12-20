@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap')
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap')
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap')
 
 @mixin smartphone
   @media (min-width: 320px) and (max-width: 640px)
@@ -7,6 +7,10 @@
 
 @mixin tablet
   @media (min-width: 768px) and (max-width: 1024px)
+      @content
+
+@mixin mintablet
+  @media (min-width: 1024px)
       @content
 
 html
@@ -81,6 +85,7 @@ header
             @include smartphone
                 font: bold 18px Montserrat
                 margin-left: 0px
+
             @include tablet
                 margin-left: 0px
 
@@ -100,7 +105,7 @@ header
         @include smartphone
             left: 0px
             right: 0
-            width: 100%
+            width: 320px
             height: 740px
             margin: 0 auto
         
@@ -123,16 +128,19 @@ header
             justify-content: center
             align-content: stretch
             left: 0
+            margin: 0 auto
         
         @include tablet
-            display: flex
+            display: block
             flex-wrap: wrap
             justify-content: center
             align-content: stretch
             left: 0
+            right: 0
+            margin: 0 auto
 
         .h-card-text
-            margin: 21px 0 22px 30px
+            margin: 21px 0 22px 42px
             left: 697px
             width: 230px
             height: 20px
@@ -157,13 +165,18 @@ header
             margin: 0 27px 0 33px
             
             @include smartphone
+                display: block
                 width: 320px
                 height: auto
                 margin: 0
 
             @include tablet
+                display: block
                 width: auto
                 height: auto
+                left: 0
+                right: 0
+                margin: 0 auto
 
             img
                 top: 163px
@@ -196,7 +209,13 @@ header
 
         @include smartphone
             display: none
-    
+        
+        @include tablet
+            top: 378px
+            left: 56px            
+        @include mintablet
+            display: none
+
     .pluma2
         position: absolute
         top: 518px
@@ -206,6 +225,12 @@ header
         z-index: 1
         
         @include smartphone
+            display: none
+
+        @include tablet
+            left: 98px
+
+        @include mintablet
             display: none
 
     .pluma3
@@ -218,6 +243,12 @@ header
         
         @include smartphone
             display: none
+        
+        @include tablet
+            left: 608px
+
+        @include mintablet
+            display: none
 
     .pluma4
         position: absolute
@@ -227,6 +258,12 @@ header
         height: 155px
 
         @include smartphone
+            display: none
+        @include tablet
+            top: 317px
+            left: 500px
+            
+        @include mintablet
             display: none
 
 //Slider controles
@@ -433,7 +470,7 @@ header
                 flex-direction: column
 
             @include tablet
-                margin: 10px
+                margin: 20px 7px
                 display: flex
                 flex-wrap: wrap
                 flex-direction: column
@@ -462,7 +499,7 @@ header
             color: #FFFFFF
             text-transform: uppercase
             border: none
-            margin: 48px 280px 0 0
+            margin: 48px 300px 0 0
             
             @include smartphone
                 margin: 20px 0 0 0
@@ -574,6 +611,35 @@ header
   100%
     opacity: 1
 
-  
+//Animações
+@keyframes fadeInUp
+  from
+    transform: translate3d(0, 40px, 0)
+
+  to
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+
+@-webkit-keyframes fadeInUp
+  from
+    transform: translate3d(0, 40px, 0)
+
+  to
+    transform: translate3d(0, 0, 0)
+    opacity: 1
+
+.animated
+  animation-duration: 3s
+  animation-fill-mode: both
+  -webkit-animation-duration: 3s
+  -webkit-animation-fill-mode: both
+
+.animatedFadeInUp
+  opacity: 0
+
+.fadeInUp
+  opacity: 0
+  animation-name: fadeInUp
+  -webkit-animation-name: fadeInUp  
   
   
